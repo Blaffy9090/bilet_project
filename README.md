@@ -5,3 +5,6 @@ Huuuuge thanks to the OG reservationApp developer.
 # Пример Билета
 [example.pdf](https://github.com/user-attachments/files/15632462/example.pdf)
 
+# Пример Оплаты
+генерилась при помощи ссылок киви
+![image](https://github.com/Blaffy9090/bilet_project/assets/119712032/b4f6b350-3836-4194-98ef-c1426b4ddcf9)
