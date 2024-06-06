@@ -1,0 +1,67 @@
+{% extends "base.html" %} {% load humanize %} {% load customfilter %} {% block pageContent %}
+
+<!--Section: Content-->
+<section class="">
+    {% if user.id %}
+    <div class="row">
+        <div class="col-lg-4 col-md-4 col-sm-12 col-xs-12">
+            <div class="card rounded-0 shadow text-start my-3">
+                <div class="card-body" style="height: 138px;">
+                    <div class="d-flex w-100">
+                        <div class="col-8 pe-2">
+                            <div class="summary-title fs-5 border-bottom">Всего категорий</div>
+                            <div class="summary-count text-end fw-bolder mt-3 px-4">{{ categories|intcomma }}</div>
+                        </div>
+                        <div class="col-4">
+                            <div class="summary-icon p-3 rounded border text-center bg-gradient bg-light">
+                                <i class="fa fa-list"></i>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-lg-4 col-md-4 col-sm-12 col-xs-12">
+            <div class="card rounded-0 shadow text-start my-3">
+                <div class="card-body" style="height: 138px;">
+                    <div class="d-flex w-100">
+                        <div class="col-8 pe-2">
+                            <div class="summary-title fs-5 border-bottom">Кол-во автобусов</div>
+                            <div class="summary-count text-end fw-bolder mt-3 px-4">{{ buses }}</div>
+                        </div>
+                        <div class="col-4">
+                            <div class="summary-icon p-3 rounded border text-center bg-gradient bg-light">
+                                <i class="fa fa-bus fs-2"></i>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-lg-4 col-md-4 col-sm-12 col-xs-12">
+            <div class="card rounded-0 shadow text-start my-3">
+                <div class="card-body">
+                    <div class="d-flex w-100">
+                        <div class="col-8 pe-2">
+                            <div class="summary-title fs-5 border-bottom">Общее кол-во будущих поездок</div>
+                            <div class="summary-count text-end fw-bolder mt-3 px-4">{{ upcoming_trip|intcomma }}</div>
+                        </div>
+                        <div class="col-4">
+                            <div class="summary-icon p-3 rounded border text-center bg-gradient bg-light">
+                                <i class="fa fa-file-invoice fs-2"></i>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    {% else %}
+    <div class="" style=" width:1000px; margin-left: 120px; font-family: 'Bahnschrift SemiBold'; color: aliceblue; text-align: center;">
+        <h1 style="text-shadow: 1px 5px 1px rgba(0, 0, 0, 0.2); font-size: 70px;">Добро пожаловать на сайт по бронированию билетов</h1>
+    </div>
+    {% endif %}
+</section>
+
+
+</div> {% endblock pageContent %}
